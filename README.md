@@ -274,10 +274,6 @@ resample_frequency: 5000
 docker compose up --build -d
 ```
 
-### Live Demo
-
-**https://mini-sae-trainer.vercel.app** — runs on precomputed static JSON (no API required).
-
 ---
 
 ## References
