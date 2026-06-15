@@ -1,6 +1,6 @@
 # Mini SAE Trainer
 
-[![CI](https://github.com/your-username/mini-sae-trainer/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/mini-sae-trainer/actions/workflows/ci.yml)
+[![CI](https://github.com/MosadCreates/novasight/actions/workflows/ci.yml/badge.svg)](https://github.com/MosadCreates/novasight/actions/workflows/ci.yml)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange.svg)](https://pytorch.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black.svg)](https://nextjs.org/)
@@ -36,32 +36,32 @@ Neural networks represent more features than they have neurons by encoding featu
 ### Architecture
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                    Training Pipeline                  │
-│  TinyStories ──► GPT-2 Small ──► HDF5 Store         │
-│                    (layer 8)      (50K tokens)       │
-│                                       │              │
-│                                       ▼              │
-│  SparseAutoencoder ◄── HDF5ActivationDataset         │
-│   (d_sae=6144)        (RAM-cached chunks)            │
-│       │                                              │
-│       ▼                                              │
-│  Feature Analysis Pipeline                           │
+┌──────────────────────────────────────────────────────────────┐
+│                    Training Pipeline                         │
+│  TinyStories ──► GPT-2 Small ──► HDF5 Store                  │
+│                    (layer 8)      (50K tokens)               │
+│                                       │                      │
+│                                       ▼                      │
+│  SparseAutoencoder ◄── HDF5ActivationDataset                 │
+│   (d_sae=6144)        (RAM-cached chunks)                    │
+│       │                                                      │
+│       ▼                                                      │
+│  Feature Analysis Pipeline                                   │
 │   (top_activations · auto_label · keyword_search · geometry) │
-└──────────────────────┬───────────────────────────────┘
+└──────────────────────┬───────────────────────────────────────┘
                        │
                        ▼
-┌─────────────────────────────────────────────────────┐
-│              FastAPI Backend (:8000)                  │
-│  7 endpoints: features, search, prompt, similar...   │
-└──────────────────────┬───────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│              FastAPI Backend (:8000)                         │
+│  7 endpoints: features, search, prompt, similar...           │
+└──────────────────────┬───────────────────────────────────────┘
                        │
                        ▼
-┌─────────────────────────────────────────────────────┐
-│           Next.js Dashboard (:3000)                  │
-│  Feature Explorer · Detail · Prompt · Search         │
-│  Dark theme · Recharts · Zustand · SWR               │
-└─────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│           Next.js Dashboard (:3000)                          │
+│  Feature Explorer · Detail · Prompt · Search                 │
+│  Dark theme · Recharts · Zustand · SWR                       │
+└──────────────────────────────────────────────────────────────┘
 ```
 
 ---
