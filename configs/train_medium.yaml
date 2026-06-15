@@ -1,0 +1,14 @@
+# SAE training configuration — medium (default)
+activations_path: "data/activations.h5"
+d_sae: 6144              # expansion factor 8x
+lambda_l1: 8.0e-5
+lr: 4.0e-4
+batch_size: 4096
+n_steps: 200_000
+resample_every: 25_000
+warmup_steps: 1000
+wandb_project: "mini-sae-trainer"
+seed: 42
+output_dir: "models/sae_medium"
+log_every: 100
+save_every: 5000

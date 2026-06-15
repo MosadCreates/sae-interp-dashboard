@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.git/
+.gitignore
+*.egg-info/
+dist/
+build/
+node_modules/
+.next/
+wandb/
+results/
+**/*.h5
+*.pt

@@ -1,0 +1,10 @@
+# Activation collection configuration
+model_name: "gpt2"
+layer: 8
+hook_point: "residual_post"  # residual_post | mlp_post
+max_tokens: 50_000_000
+batch_size: 8
+context_length: 128
+output_path: "data/activations.h5"
+seed: 42
+num_workers: 4

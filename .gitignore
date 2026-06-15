@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.so
+
+# Data & Models
+data/
+models/
+results/
+
+# Environment
+.env
+*.env.local
+
+# Node
+node_modules/
+.next/
+dashboard/out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Wandb
+wandb/
+
+# Docker
+docker-compose.yml.bak
+
+# TypeScript
+tsconfig.tsbuildinfo
+
+# Logs
+*.log

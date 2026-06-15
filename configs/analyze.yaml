@@ -1,0 +1,9 @@
+# Feature analysis configuration
+model_path: "models/sae_medium/sae_final.pt"
+activations_path: "data/activations.h5"
+output_dir: "results"
+n_top_tokens: 50
+context_window: 10
+top_k_similar: 10
+batch_size: 4096
+seed: 42
